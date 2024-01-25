@@ -1,0 +1,206 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    outline: none;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    background: url('https://plus.unsplash.com/premium_photo-1669865742039-e67964396cc8?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+    background-size: cover;
+    background-position: center;
+    font-family: 'Poppins', sans-serif;
+}
+.mainbox {
+    position: relative;
+    width: 500px;
+    height: 500px;
+    margin-top: 50px;
+}
+.mainbox::after {
+    position: absolute;
+    content: "";
+    width: 50px;
+    height: 100%;
+    background: url(./arrow.png) no-repeat;
+    /* background-size: 5%; */
+    right: -90px;
+    top: 48%;
+    z-index: 9;
+    transform: translateX(-50%);
+}
+.box {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    border-radius: 50%;
+    border: 10px solid whitesmoke;
+    overflow: hidden;
+    transition: all ease-in-out 5s;
+    transform: rotate(90deg);
+}
+span {
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+    position: absolute;
+}
+
+.span1 {
+    clip-path: polygon(0 17%, 0 50%, 50% 50%);
+    background-color: green;
+}
+.span2 {
+    clip-path: polygon(0 17%, 30% 0, 50% 50%);
+    background-color: violet;
+}
+.span3 {
+    clip-path: polygon(30% 0, 71% 0, 50% 50%);
+    background-color: goldenrod;
+    ;
+}
+.span4 {
+    clip-path: polygon(71% 0, 100% 18%, 50% 50%);
+    background-color: purple;
+}
+.span5 {
+    clip-path: polygon(100% 18%, 100% 50%, 50% 50%);
+    background-color: coral;
+}
+.box2 .span3 {
+    background-color: mediumseagreen;
+}
+.box2 {
+    width: 100%;
+    height: 100%;
+    transform: rotate(180deg);
+}
+.box2 .span1 {
+    background-color: magenta;
+}
+.font {
+    color: #fff;
+    font-size: 20px;
+}
+.box1 .span1 h5 {
+    position: absolute;
+    top: 40%;
+    right: 63%;
+    transform: rotate(200deg);
+    text-align: center;
+}
+.box1 .span2 h5 {
+    position: absolute;
+    top: 20%;
+    right: 65%;
+    transform: rotate(200deg);
+    text-align: center;
+}
+.box1 .span2 h5 {
+    position: absolute;
+    top: 30%;
+    right: 56%;
+    transform: rotate(226deg);
+    text-align: center;
+}
+.box1 .span3 h5 {
+    position: absolute;
+    top: 20%;
+    right: 33%;
+    transform: rotate(270deg);
+    text-align: center;
+}
+.box1 .span4 h5 {
+    position: absolute;
+    top: 22%;
+    right: 33%;
+    transform: rotate(270deg);
+    text-align: center;
+}
+.box1 .span4 h5 {
+    position: absolute;
+    top: 31%;
+    right: 27%;
+    transform: rotate(305deg);
+    text-align: center;
+}
+.box1 .span5 h5 {
+    position: absolute;
+    top: 42%;
+    right: 16%;
+    transform: rotate(-15deg);
+    text-align: center;
+}
+.box2 .span1 h5 {
+    position: absolute;
+    top: 40%;
+    right: 63%;
+    transform: rotate(200deg);
+    text-align: center;
+}
+.box2 .span2 h5 {
+    position: absolute;
+    top: 28%;
+    right: 56%;
+    transform: rotate(228deg);
+    text-align: center;
+}
+.box2 .span3 h5 {
+    position: absolute;
+    top: 19%;
+    right: 35%;
+    transform: rotate(268deg);
+    text-align: center;
+}
+.box2 .span4 h5 {
+    position: absolute;
+    top: 30%;
+    right: 25%;
+    transform: rotate(307deg);
+    text-align: center;
+}
+.box2 .span5 h5 {
+    position: absolute;
+    top: 41%;
+    right: 17%;
+    transform: rotate(-16deg);
+    text-align: center;
+}
+.spin {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    border: 4px solid white;
+    background: blue;
+    color: #fff;
+    box-shadow: 0 5px 20px #000;
+    font-weight: bold;
+    z-index: 1;
+    cursor: pointer;
+}
+.spin.active {
+    width: 70px;
+    height: 70px;
+    font-size: 20px;
+}
+.mainbox.animate:after{
+    animation: animateArrow .7s ease infinite;
+}
+audio {
+    display: none;
+}
+@keyframes animateArrow {
+    50% {
+        right: -50px;
+    }
+}
